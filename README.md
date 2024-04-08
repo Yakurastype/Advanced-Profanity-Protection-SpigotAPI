@@ -3,7 +3,7 @@ Advanced Profanity Protection is a webhook-supported profanity filter; it can ap
 
 ⋆ Version: 1.16.5 < all
 
-⋆ If you want to interpret a word as swearing only in its plain form, put a '*' sign at the end of the word (e.g. fuck*)
+⋆ If you want to interpret a word as swearing only in its plain form, put a `'*'` sign at the end of the word (e.g. `fuck*`)
 
 ★ FEATURES
   - '/pp reload' command
