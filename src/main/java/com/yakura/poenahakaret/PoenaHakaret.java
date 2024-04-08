@@ -21,10 +21,10 @@ public final class PoenaHakaret extends JavaPlugin {
         configManager.setupConfig();
 
         this.getLogger().info("\u001B[32mSUCCESS: \u001B[0mSohbet Listener Başlatıldı \u001B[31m♥ \u001B[0m");
-        this.getLogger().info(MessageHelper.CommandConsoleLogger("'PoenaHakaret Reload' Komutu Yüklendi \u001B[0m"));
+        this.getLogger().info(MessageHelper.CommandConsoleLogger("'pp Reload' Komutu Yüklendi \u001B[0m"));
         this.getLogger().info(" ");
 
-        getCommand("poenahakaret").setExecutor(new ReloadCommand(this));
+        getCommand("pp").setExecutor(new ReloadCommand(this));
         getServer().getPluginManager().registerEvents(new MessageFilter(this), this);
 
     }
