@@ -2,6 +2,7 @@
 Advanced Profanity Protection is a webhook-supported profanity filter; it can apply penalties based on categories and detect censorship.
 
 ⋆ Version: 1.16.5 < all
+
 ★ FEATURES
   - '/pp reload' command
   - Discord webhook support
