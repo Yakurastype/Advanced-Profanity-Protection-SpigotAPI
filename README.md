@@ -19,7 +19,7 @@ Advanced Profanity Protection is a webhook-supported profanity filter; it can ap
   - Language System
 
 STANDART Config.yml:
-```
+```yaml
 catagories:
   Sexuality:
     wordlist:
