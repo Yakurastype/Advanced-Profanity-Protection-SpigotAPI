@@ -1,0 +1,23 @@
+catagories:
+  Sexuality:
+    wordlist:
+      - gay
+      - LGBTQ+
+    punishment: tempmute %player% 3h Sexuality
+  Slang:
+    wordlist:
+      - stupid
+    punishment: tempmute %player% 30m Slang
+
+whitelist-words:
+  - EXAMPLE_WORD
+
+webhook:
+  enabled: false
+  url: "YOUR WEBHOOK"
+
+censor:
+  chance: 1.0
+
+administrator:
+  permissions: poenasaga_yetkili

@@ -1,0 +1,7 @@
+com\yakura\poenahakaret\commands\ReloadCommand.class
+com\yakura\poenahakaret\managers\MessageHelper.class
+com\yakura\poenahakaret\filters\MessageFilter.class
+com\yakura\poenahakaret\PoenaHakaret.class
+com\yakura\poenahakaret\managers\ConfigManager.class
+com\yakura\poenahakaret\managers\WebhookSender.class
+com\yakura\poenahakaret\managers\WebhookSender$1.class
