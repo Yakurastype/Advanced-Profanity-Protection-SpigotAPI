@@ -5,6 +5,5 @@ api-version: '1.16'
 commands:
   pp:
     description: "PoenaHakaret pluginiyle ilgili komutlar."
-    usage: "/pp <reload>"
     aliases: []
     permission: "poenahakaret.command.reload"

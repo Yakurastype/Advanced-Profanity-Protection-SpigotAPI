@@ -81,26 +81,52 @@ public class MessageFilter implements Listener {
 
 
     private boolean isFoulLanguage(String message, String foulWord) {
-        if (Bukkit.getPlayer(foulWord) != null) {
-            return false;
-        }
+        String[] words = message.split("\\s+");
 
-        List<String> allowedWords = plugin.getConfig().getStringList("whitelist-words");
-        for (String allowedWord : allowedWords) {
-            if (message.contains(allowedWord.toLowerCase())) {
-                return false;
+        for (String word : words) {
+            Player targetPlayer = Bukkit.getPlayer(word);
+            if (targetPlayer != null && targetPlayer.getName().equalsIgnoreCase(word)) {
+                continue;
+            }
+
+            if (plugin.getConfig().getStringList("whitelist-words").contains(word.toLowerCase())) {
+                continue;
+            }
+
+            if (foulWord.endsWith("*")) {
+                String exactWord = foulWord.substring(0, foulWord.length() - 1);
+                if (word.equalsIgnoreCase(exactWord)) {
+                    return true;
+                }
+            } else {
+                if (word.length() >= foulWord.length()) {
+                    for (int i = 0; i <= word.length() - foulWord.length(); i++) {
+                        boolean match = true;
+                        for (int j = 0; j < foulWord.length(); j++) {
+                            if (word.charAt(i + j) != foulWord.charAt(j)) {
+                                match = false;
+                                break;
+                            }
+                        }
+                        if (match) {
+                            int minAccuracy = (int) Math.ceil(foulWord.length() * plugin.getConfig().getDouble("censor.chance"));
+                            int correctCount = foulWord.length();
+                            if (correctCount >= minAccuracy) {
+                                return true;
+                            }
+                        }
+                    }
+                }
             }
         }
 
-        int minAccuracy = (int) Math.ceil(foulWord.length() * plugin.getConfig().getDouble("censor.chance"));
-        int correctCount = 0;
-        for (int i = 0; i < foulWord.length(); i++) {
-            if (i < message.length() && foulWord.charAt(i) == message.charAt(i)) {
-                correctCount++;
-            }
-        }
-        return correctCount >= minAccuracy;
+        return false;
     }
+
+
+
+
+
 
 
     private void sendLogMessage(Player player, String category, String foulWord, String cezaKomut) {

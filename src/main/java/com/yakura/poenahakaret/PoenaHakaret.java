@@ -5,7 +5,7 @@ import com.yakura.poenahakaret.filters.MessageFilter;
 
 import com.yakura.poenahakaret.managers.ConfigManager;
 import com.yakura.poenahakaret.managers.MessageHelper;
-import org.bukkit.Bukkit;
+import com.yakura.poenahakaret.managers.TabCompleteManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PoenaHakaret extends JavaPlugin {
@@ -27,6 +27,8 @@ public final class PoenaHakaret extends JavaPlugin {
         getCommand("pp").setExecutor(new ReloadCommand(this));
         getServer().getPluginManager().registerEvents(new MessageFilter(this), this);
 
+        TabCompleteManager tabCompleteManager = new TabCompleteManager(this);
+        getCommand("pp").setTabCompleter(tabCompleteManager);
     }
 
 

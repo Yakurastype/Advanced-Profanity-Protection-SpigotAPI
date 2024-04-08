@@ -1,4 +1,5 @@
 com\yakura\poenahakaret\commands\ReloadCommand.class
+com\yakura\poenahakaret\managers\TabCompleteManager.class
 com\yakura\poenahakaret\managers\MessageHelper.class
 com\yakura\poenahakaret\filters\MessageFilter.class
 com\yakura\poenahakaret\PoenaHakaret.class
