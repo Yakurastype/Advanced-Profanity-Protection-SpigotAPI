@@ -86,8 +86,10 @@ public class MessageFilter implements Listener {
         }
 
         List<String> allowedWords = plugin.getConfig().getStringList("whitelist-words");
-        if (allowedWords.contains(message.toLowerCase())) {
-            return false;
+        for (String allowedWord : allowedWords) {
+            if (message.contains(allowedWord.toLowerCase())) {
+                return false;
+            }
         }
 
         int minAccuracy = (int) Math.ceil(foulWord.length() * plugin.getConfig().getDouble("censor.chance"));
@@ -99,6 +101,7 @@ public class MessageFilter implements Listener {
         }
         return correctCount >= minAccuracy;
     }
+
 
     private void sendLogMessage(Player player, String category, String foulWord, String cezaKomut) {
         String yetkiliPerm = plugin.getConfig().getString("administrator.permissions");
