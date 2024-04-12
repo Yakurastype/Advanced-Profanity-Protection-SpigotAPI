@@ -1,8 +1,10 @@
 catagories:
   1Seviye-Kufur:
     wordlist:
-      - amk
-      - aq
+      - oc*
+      - oç*
+      - amk*
+      - aq*
       - yarram
       - yarrak
       - yarra
@@ -27,22 +29,22 @@ catagories:
       - amina koyim
       - amina
       - cocuğu
-      - cocu
     punishment: tempmute %player% 45m [OTO MUTE] 1. Seviye Küfür
   2Seviye-Kufur:
     wordlist:
       - orospu
+      - 0ruspu
+      - owuspu
       - orosp
       - oros
       - babanı sikeyim
       - babanı
       - anneni
-      - anan
-      - anne
       - skyim
       - slaleni
       - sokam
       - sikerim
+      - sıker
       - sokarım
       - sokarim
       - sokarm
@@ -64,14 +66,14 @@ catagories:
       - babaanneni
       - babaneni
       - bacını
-      - sik
+      - sik*
       - siksin
       - sikiş
       - karını
       - kızını
       - domal
       - götünü
-      - anan
+      - anan*
       - anandan
       - anandan
       - anandan
@@ -79,7 +81,7 @@ catagories:
       - ananı
       - ananı
       - ananın
-      - anana
+      - anana*
       - ananın am
       - ananın amı
       - ananın dölü
@@ -98,28 +100,24 @@ catagories:
       - anani sikeyim
       - anann
       - ananz
-      - anas
       - anasını
       - anasının am
       - anası orospu
       - anasi
       - anasinin
-      - anay
       - anayin
       - angut
       - anneni
       - annenin
       - annesiz
-      - anuna
-      - aptal
     punishment: tempmute %player% 2h [OTO MUTE] 2. Seviye Küfür
   Argo-Kufur:
     wordlist:
-      - mal
+      - mal*
       - aptal
       - salak
       - gerzek
-      - göt
+      - göt*
       - ibne
       - ibine
       - kaşar
@@ -128,14 +126,12 @@ catagories:
     punishment: tempmute %player% 30m [OTO MUTE] Argo Kullanımı
   Dini-Kufur:
     wordlist:
-      - allahını
       - allahini
       - peygamberini
       - islamini
       - allahsız
       - islamını
-      - am*
-    punishment: tempmute %player% 30m [OTO MUTE] Argo Kullanımı
+    punishment: tempmute %player% 30m [OTO MUTE] Dini Küfür Kullanımı
 
 whitelist-words:
   - ancak
@@ -148,10 +144,18 @@ whitelist-words:
   - amaç
   - amaçlama
   - amigo
+  - ocak
+  - koc
+  - koç
+  - inananı
+  - ınanan
+  - inanan
+  - inanana
+  - ınanana
 
 webhook:
   enabled: false
-  url: "YOUR WEBHOOK"
+  url: "YOUR-WEBHOOK-LINK"
 
 censor:
   chance: 1.0
