@@ -38,7 +38,6 @@ public class MessageFilter implements Listener {
             return;
         }
 
-
         String message = event.getMessage();
 
         ConfigurationSection kufurCategories = plugin.getConfig().getConfigurationSection("catagories");
@@ -76,9 +75,6 @@ public class MessageFilter implements Listener {
 
         event.setMessage(message);
     }
-
-
-
 
     private boolean isFoulLanguage(String message, String foulWord) {
         String[] words = message.split("\\s+");
@@ -123,15 +119,8 @@ public class MessageFilter implements Listener {
         return false;
     }
 
-
-
-
-
-
-
     private void sendLogMessage(Player player, String category, String foulWord, String cezaKomut) {
         String yetkiliPerm = plugin.getConfig().getString("administrator.permissions");
-        plugin.getLogger().info(MessageHelper.LogConsoleLogger(player + ", " + category + ", '" + foulWord + "'"));
         for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
             if (onlinePlayer.isOp() || onlinePlayer.hasPermission(yetkiliPerm)) {
                 String logMessage = String.format("&d&lLOG > &e%s &badlı oyuncu, &e%s &bkategorisinde &e'%s' &bkelimesini kullanarak hakaret etti.", player.getName(), category, foulWord);

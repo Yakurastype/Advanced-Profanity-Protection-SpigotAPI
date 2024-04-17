@@ -1,9 +1,0 @@
-name: PoenaHakaret
-version: '1'
-main: com.yakura.poenahakaret.PoenaHakaret
-api-version: '1.16'
-commands:
-  pp:
-    description: "PoenaHakaret pluginiyle ilgili komutlar."
-    aliases: []
-    permission: "poenahakaret.command.reload"
